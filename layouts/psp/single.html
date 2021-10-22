@@ -1,9 +1,8 @@
 {{ define "main" }}
-<p>docs single</p>
 	<div class="row flex-xl-nowrap">
 		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
 			<nav class="docs-links" aria-label="Main navigation">
-				{{ partial "sidebar/docs-menu.html" . }}
+				{{ partial "sidebar/python-menu.html" . }}
 			</nav>
 		</div>
 		{{ if ne .Params.toc false -}}

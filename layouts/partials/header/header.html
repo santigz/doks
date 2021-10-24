@@ -6,12 +6,16 @@
 <div class="sticky-lg-top">
 {{ end -}}
 
+{{- $sectionName := path.Base (path.Dir .CurrentSection) -}}
+{{- $sectionMenu := index .Site.Menus $sectionName -}}
+
 <div class="header-bar"></div>
 
 <header class="navbar navbar-expand-md navbar-light doks-navbar">
   <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
-    <a class="navbar-brand p-0 me-auto" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
-      {{ .Site.Params.Title }}
+    {{- $section := path.Dir .FirstSection.RelPermalink -}}
+    <a class="navbar-brand p-0 me-auto" href="{{ $section }}" aria-label="{{ .Site.Params.Title }}">
+      {{- .Site.Params.Title }}{{ $section -}}
     </a>
 
     <button class="btn btn-menu d-block d-md-none order-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
@@ -28,7 +32,8 @@
         <h3 class="h6 text-uppercase mb-3 d-md-none">Main</h3>
         <ul class="nav flex-column flex-md-row ms-md-n3">
           {{- $current := . -}}
-          {{ range .Site.Menus.main -}}
+          {{/* range .Site.Menus.main */}}
+          {{- range $sectionMenu -}}
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
             {{- $active = or $active (and (eq .Name "Python") (eq $current.Section "python")) -}}

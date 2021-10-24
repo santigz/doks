@@ -16,8 +16,10 @@ disableLanguages = ["de", "nl"]
 
 # add redirects/headers
 [outputs]
-home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
-section = ["HTML", "RSS", "SITEMAP"]
+home = ["HTML"]
+section = ["HTML"]
+#home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+#section = ["HTML", "RSS", "SITEMAP"]
 
 # remove .{ext} from text/netlify
 [mediaTypes."text/netlify"]

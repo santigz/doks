@@ -1,8 +1,12 @@
 {{ if .Site.Params.options.collapsibleSidebar -}}
+    {{/* Take the menu name from the first section name (i.e. dir name under contents) */}}
+    {{ $sectionName := path.Base (path.Dir .CurrentSection) }}
+    {{ $menu := index .Site.Menus $sectionName }}
+
   <ul class="list-unstyled collapsible-sidebar">
   {{ $currentPage := . -}}
-  {{ range $index, $element := .Site.Menus.python -}}
-  {{- $active := or ($currentPage.IsMenuCurrent "python" .) ($currentPage.HasMenuCurrent "python" .) -}}
+  {{ range $index, $element := $menu -}}
+  {{- $active := or ($currentPage.IsMenuCurrent $sectionName .) ($currentPage.HasMenuCurrent $sectionName .) -}}
   {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
     <li class="mb-1">
       <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ .Identifier }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
@@ -12,7 +16,7 @@
       <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ .Identifier }}">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
         {{ range .Children -}}
-          {{- $active := or ($currentPage.IsMenuCurrent "python" .) ($currentPage.HasMenuCurrent "python" .) -}}
+          {{- $active := or ($currentPage.IsMenuCurrent $sectionName .) ($currentPage.HasMenuCurrent $sectionName .) -}}
           {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
           <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
         {{ end -}}
@@ -24,12 +28,12 @@
   </ul>
 {{ else -}}
   {{ $currentPage := . -}}
-  {{ range .Site.Menus.python -}}
+  {{ range $menu -}}
     <h3 class="h6 text-uppercase">{{ .Name }}</h3>
     {{ if .HasChildren -}}
     <ul class="list-unstyled">
       {{ range .Children -}}
-        {{- $active := or ($currentPage.IsMenuCurrent "python" .) ($currentPage.HasMenuCurrent "python" .) -}}
+        {{- $active := or ($currentPage.IsMenuCurrent $sectionName .) ($currentPage.HasMenuCurrent $sectionName .) -}}
         {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
         <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
       {{ end -}}

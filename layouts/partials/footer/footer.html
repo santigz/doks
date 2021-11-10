@@ -1,3 +1,4 @@
+{{- if or .Site.Params.footer .Site.Menus.footer -}}
 <footer class="footer text-muted">
   <div class="container-xxl">
     <div class="row">
@@ -16,3 +17,4 @@
     </div>
   </div>
 </footer>
+{{- end -}}

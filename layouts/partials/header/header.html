@@ -44,6 +44,7 @@
             </li>
           {{ end -}}
         </ul>
+        {{ if .Site.Menus.social -}}
         <hr class="text-black-50 my-4 d-md-none">
         <h3 class="h6 text-uppercase mb-3 d-md-none">Socials</h3>
         <ul class="nav flex-column flex-md-row ms-md-auto me-md-n5 pe-md-2">
@@ -53,6 +54,7 @@
             </li>
           {{ end -}}
         </ul>
+        {{ end -}}
       </div>
     </div>
     {{ if .Site.Params.options.darkMode -}}

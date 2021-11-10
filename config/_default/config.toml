@@ -2,6 +2,7 @@ baseurl = "https://sgz.es"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
+disableKinds = ["sitemap"]
 enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = false

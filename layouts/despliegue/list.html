@@ -3,9 +3,7 @@
   <div class="col-md-12 col-lg-10 col-xl-8">
     <article>
       <h1 class="text-center">{{ .Title }}</h1>
-      {{ if .Content }}
       <div class="text-center">{{ .Content }}</div>
-      {{- else -}}
 			<div class="card-list">
 				{{ $currentSection := .CurrentSection }}
 				{{ range where .Site.RegularPages.ByTitle "Section" .Section }}
@@ -18,7 +16,6 @@
 					{{ end }}
 				{{ end }}
 			</div>
-      {{- end }}
     </article>
   </div>
 </div>

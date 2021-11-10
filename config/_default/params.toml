@@ -6,6 +6,9 @@ titleSeparator = "-"
 titleAddition = "sgz.es"
 description = "sgz.es"
 
+## Documentation
+# docsVersion = "0.3"
+
 ## Open Graph
 images = [""]
 ogLocale = "es_ES"
@@ -62,6 +65,9 @@ alertDismissable = true
 alertText = ""
 
 # Edit Page
+# repoHost [Github | Gitea | GitLab] is used for building the edit link based on git hoster
+repoHost = ""
+#repoHost = "Gitea"
 docsRepo = ""
 docsRepoBranch = "master"
 editPage = false
@@ -78,4 +84,4 @@ editPage = false
   kaTex = false
   collapsibleSidebar = true
   multilingualMode = false
-  docsVersioning = false # Not yet functional
+  docsVersioning = false

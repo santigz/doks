@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>sgz.es</title>
+    <style>
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 0px 2px 5px gray;
+}
+
+header h1::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 5px;
+    /*width: 110%;*/
+    /*left: -5%;*/
+    background: #bc03ff;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    padding: 0 7vw;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #a304dd;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.sgz {
+    display: inline-block;
+    width: 100px;
+    position: relative;
+    text-decoration: none;
+    color: #330940;
+    font-weight: 300;
+    /*filter: grayscale(100%);*/
+}
+
+/*
+.sgz:hover {
+    filter: none;
+    -webkit-filter: drop-shadow(0px 0px 3px #222);
+    filter: drop-shadow(0px 0px 3px #222);
+}
+*/
+
+.sgz::before {
+    content: "";
+    display: block;
+    background-image: url(img/sgz_icon.png);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: -1.28em;
+    z-index: -1;
+}
+    </style>
+
+<body>
+      <header>
+          <h1>Hi, I'm Santi!</h1>
+      </header>
+      <main>
+          <p>Thanks for passing by!</p>
+          <p>You can say hi <a href="https://twitter.com/santi_sgz">@santi_sgz</a></p>
+          <p>I also devote some time to <a href="https://crowdfight.org">crowdfight.org</a><br>
+	  If you are a researcher you might want to join!
+	  </p>
+	  <p>The rest of this site is for my students only!</p>
+	  <!--<p style="color: gray;">You will find no cookies or analytics here ;)</p>-->
+      </main>
+
+
+      <footer>
+          <i href="#" class="sgz"></i>
+      </footer>
+</body>
+</html>

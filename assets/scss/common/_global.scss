@@ -2,7 +2,7 @@
 .blog .content,
 .page .content,
 .error404 .content,
-.docs.list .content,
+.list .content,
 .tutorial.list .content,
 .showcase.list .content {
   padding-top: 1rem;
@@ -38,7 +38,7 @@ h5.offcanvas-title {
   margin: 0;
 }
 
-body.docs {
+body {
   padding-top: 0 !important;
 }
 

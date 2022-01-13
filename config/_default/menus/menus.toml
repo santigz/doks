@@ -20,6 +20,11 @@
   name = 'Linux'
   url = '/linux/configuracion-inicial'
 
+[[nginx]]
+  identifier = 'nginx'
+  name = 'Nginx'
+  url = '/nginx'
+
 # [[main]]
 #   name = "Docs"
 #   url = "/docs/prologue/introduction/"

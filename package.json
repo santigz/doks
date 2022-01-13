@@ -11,6 +11,7 @@
     "access": "public"
   },
   "scripts": {
+    "sgz": "exec-bin node_modules/.bin/hugo/hugo --gc && rsync -av --delete public/ cloud:/var/www/sgz.es/",
     "init": "shx rm -rf .git && git init -b main",
     "create": "exec-bin node_modules/.bin/hugo/hugo new",
     "prestart": "npm run clean",

@@ -10,7 +10,7 @@ description = "sgz.es"
 # docsVersion = "0.3"
 
 ## Open Graph
-images = [""]
+images = ["sgz-icon-512.png"]
 ogLocale = "es_ES"
 domainTLD = "sgz.es"
 titleHome = "sgz.es"
@@ -22,7 +22,7 @@ twitterCreator = ""
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "Doks"
+schemaName = "sgz.es"
 schemaAuthor = ""
 schemaAuthorTwitter = ""
 schemaAuthorLinkedIn = ""
@@ -31,9 +31,9 @@ schemaLocale = "es-ES"
 schemaLogo = ""
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = ""
-schemaImageWidth = 1280
-schemaImageHeight = 640
+schemaImage = "https://sgz.es/sgz-icon-512.png"
+schemaImageWidth = 512
+schemaImageHeight = 512
 schemaTwitter = ""
 schemaLinkedIn = ""
 schemaGitHub = ""
@@ -46,7 +46,8 @@ siteLinksSearchBox = true
 themeColor = "#fff"
 
 # Images
-quality = 85
+#quality = 85
+quality = 95
 bgColor = "#fff"
 landscapePhotoWidths = [900, 800, 700, 600, 500]
 portraitPhotoWidths = [800, 700, 600, 500]

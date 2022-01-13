@@ -10,8 +10,14 @@ import ini from 'highlight.js/lib/languages/ini';
 import yaml from 'highlight.js/lib/languages/yaml';
 import markdown from 'highlight.js/lib/languages/markdown';
 import plaintext from 'highlight.js/lib/languages/plaintext';
+import nginx from 'highlight.js/lib/languages/nginx';
+import http from 'highlight.js/lib/languages/http';
+import sql from 'highlight.js/lib/languages/sql';
 
+hljs.registerLanguage('sql', sql);
+hljs.registerLanguage('http', http);
 hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('nginx', nginx);
 hljs.registerLanguage('python', python);
 hljs.registerLanguage('plaintext', plaintext);
 hljs.registerLanguage('java', java);

@@ -15,7 +15,7 @@ toc: true
 
 ## Orientación a objetos
 
-OOP (Object-Oriented Programming) es uno de los paradigmas de programación incluidos en Python, demás de ser un lenguaje funcional.
+OOP (Object-Oriented Programming) es uno de los paradigmas de programación incluidos en Python, además de ser un lenguaje funcional.
 
 Python tiene un enfoque particular de OOP. Analiza el siguiente ejemplo:
 

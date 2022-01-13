@@ -57,5 +57,6 @@ a.card::before {
   <a class="card" href="https://docs.google.com/presentation/d/1PFH06HvcHpF-GwIqEPxYOD2q9CDh80hQ/edit?usp=sharing&ouid=107317849449267205654&rtpof=true&sd=true">Git inicial</a>
   <a class="card" href="https://docs.google.com/presentation/d/1oivy43-OaRixS_1HrmsXmEu49vFxb2fl/edit#slide=id.p1">Git branching</a>
   <a class="card" href="/psp/python/intro/">Python</a>
+  <a class="card" href="https://docs.google.com/presentation/d/19wiqBHlPwU4kH4mNQv9ywCVSMH6HKuCJz4Ntpx2O7ng/edit?usp=sharing">Procesos (y Python)</a>
 <!--<a class="card" href="https://blu3r4y.github.io/python-for-java-developers/">Python →</a>-->
 </main>

@@ -13,10 +13,9 @@ toc: true
 ---
 
 
-## Configuración de red
 Si miras manuales ten en cuenta que en Linux se solía usar el tradicional `ifconfig` del paquete [net-tools](https://www.linux.co.cr/ldp/lfs/appendixa/net-tools.html), pero actualmente casi todas las distribuciones se han pasado al comando `ip` del paquete [iproute2](https://en.wikipedia.org/wiki/Iproute2).
 
-### Dirección IP
+## Dirección IP
 - Ver dirección IP:
   ```bash
   $ ip address show  # Comando completo
@@ -34,7 +33,7 @@ Si miras manuales ten en cuenta que en Linux se solía usar el tradicional `ifco
   192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.137 metric 600
   ```
 
-### DNS
+## DNS
 - Al arrancar el sistema se lee la configuración DNS del fichero `/etc/resolv.conf`:
   ```bash
   $ cat /etc/resolv.conf
@@ -54,4 +53,16 @@ Si miras manuales ten en cuenta que en Linux se solía usar el tradicional `ifco
       Current DNS Server: 1.1.1.1
         DNS Servers: 1.1.1.1 192.168.1.1
   ```
+
+## Puertos abiertos
+
+Para ver los puertos abiertos que hay en una máquina usa:
+- `ss` es el comando para investigar sockets.
+- `-t` filtra por puertos TCP (no muestra UDP).
+- `-n` muestra los puertos con número en vez de nombre.
+- `-l` listen: puertos en modo escucha de aplicaciones que hacen de servidor.
+- `-p` muestra procesos que hay detrás de cada puerto (requiere privilegios).
+```bash
+$ sudo ss -tnlp
+```
 

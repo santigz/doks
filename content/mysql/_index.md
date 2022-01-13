@@ -1,34 +1,43 @@
 ---
-title : "MySQL"
-description: "Instrucciones básicas SQL"
-date: 2020-10-06T08:48:23+00:00
-lastmod: 2020-10-06T08:48:23+00:00
+title: MySQL
+description: Instrucciones básicas SQL
+date: 2020-10-06
+lastmod: 2020-10-06
 draft: false
 images: []
 toc: true
 ---
 
-Entrar en la consola de MySQL:
+## Crear DB y usuario
+Entramos en la consola de MySQL como root:
 ```bash
-$ mysql
-$ mysql -u <user>
-$ sudo mysql
+$ sudo mysql       # Si el root no tiene password
+$ sudo mysql -p    # Si el root tiene password
 ```
 
-Crear base de datos:
+Creamos una base de datos, un usuario, y le otorgamos privilegios sobre la DB:
 ```sql
-create database DATABASE_NAME;
-use DATABASE_NAME;
+mysql> create database DATABASE_NAME;
+mysql> create user 'USER_NAME'@'localhost' identified by 'PASSWORD';
+mysql> grant all privileges on DATABASE_NAME.* to 'USER_NAME'@'localhost';
+mysql> flush privileges;
 ```
 
-Crear usuario y dar privilegios a la DB:
+## Comprobar el usuario
+Entramos con el usuario que hemos creado (sin `sudo`):
+```bash
+$ mysql -u USER_NAME -p
+```
+Solo deberíamos ver aquello para lo que tiene permisos el usuario, que es su DB:
 ```sql
-create user 'USER_NAME'@'localhost' identified by 'PASSWORD';
-grant all privileges on DATABASE_NAME.* TO 'USER_NAME'@'localhost';
+mysql> show databases;     -- Muestra las DBs
+mysql> use DATABASE_NAME;  -- Entra dentro de una DB
+mysql> show tables;        -- Muestra las tablas de la DB (si hay alguna)
 ```
 
-Aplicar privilegios ahora mismo:
+## Eliminar la DB o el usuario
+Entrando como root:
 ```sql
-flush privileges;
+mysql> drop database DATABASE_NAME;
+mysql> drop user USER_NAME;
 ```
-

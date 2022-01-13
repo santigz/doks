@@ -18,15 +18,14 @@ toc: true
 Cuando el sistema arranca, el kernel se encarga de lanzar un único proceso: el gestor de servicios, que es el proceso con PID 1.
 
 Esto lo puedes comprobarlo con el comando `pstree`:
-```bash
-$ pstree
-
+<pre>
+<code style="line-height: 1rem" class="language-text hljs language-plaintext">$ pstree
 systemd─┬─ModemManager───2*[{ModemManager}]
         ├─NetworkManager───2*[{NetworkManager}]
-        ├─gdm3─┬─gdm-session-wor─┬─gdm-x-session─┬─Xorg───2*[{Xorg}]
-        │      │                 │               ├─gnome-session-b───2*[{gnome-session-b}]
-        │      │                 │               └─2*[{gdm-x-session}]
-        │      │                 └─2*[{gdm-session-wor}]
+        ├─gdm3─┬─gdm-session─┬─gdm-x-sess─┬─Xorg───2*[{Xorg}]
+        │      │             │            ├─gnome-sess───2*[{gnome-sess}]
+        │      │             │            └─2*[{gdm-x-session}]
+        │      │             └─2*[{gdm-session-wor}]
         │      └─2*[{gdm3}]
         ├─named───25*[{named}]
         ├─systemd─┬─(sd-pam)
@@ -36,7 +35,8 @@ systemd─┬─ModemManager───2*[{ModemManager}]
         │                           ├─gsd-disk-utilit───2*[{gsd-disk-utilit}]
         │                           └─3*[{gnome-session-b}]
         └─systemd-resolve
-```
+</code>
+</pre>
 
 Algo de historia:
 - **SysV init:** el gestor inicial de UNIX System V de 1983.
@@ -55,8 +55,7 @@ $ systemctl
 
 Ver el estado de un servicio, por ejemplo el resolvedor DNS del sistema:
 ```bash
-	$ systemctl status systemd-resolved.service
-
+$ systemctl status systemd-resolved.service
 	● systemd-resolved.service - Network Name Resolution
      Loaded: loaded (/lib/systemd/system/systemd-resolved.service; enabled; vendor preset: enab>
      Active: active (running) since Thu 2021-10-21 14:13:08 CEST; 1 day 7h ago

@@ -61,5 +61,6 @@ a.card::before {
   <a class="card" href="/linux/configuracion-inicial/">Linux</a>
   <a class="card" href="https://docs.google.com/presentation/d/1xsPaq8FvVzIddNXvMNc24aSwExMj0NJtMyoDIkISpak/edit?usp=sharing">Protocolo HTTP</a>
   <a class="card" href="/nginx/">Nginx</a>
+  <a class="card" href="/rsync/">scp y rsync</a>
 <!--<a class="card" href="https://blu3r4y.github.io/python-for-java-developers/">Python →</a>-->
 </main>

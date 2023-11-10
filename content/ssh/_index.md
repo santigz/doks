@@ -150,7 +150,7 @@ $ ssh user@remote-host
 
 Si tu clave privada está en otra ruta, usa la opción `-i` para indicar el fichero de identidad:
 ```bash
-$ ssh -i /ruta/a/la/clave-privada user@host
+$ ssh -i /ruta/de/la/clave-privada user@host
 ```
 - Es habitual dar la extensión `.pem` a las claves privadas.
 
@@ -172,10 +172,26 @@ user@remote-host $
 
 ## Permisos de las claves
 
-Para tener buenos hábitos de seguridad, SSH lanza un error al usar una clave que tiene demasiados permisos.
-```bash
-$ chmod 400 /ruta/a/la/clave-privada
+Una clave privada debería estar bien protegida. Si tu fichero de clave tiene unos permisos más abiertos de lo debido, ssh te mostrará el siguiente mensaje:
 ```
+$ ssh -i private-key.pem ubuntu@192.168.0.1
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions for 'private-key.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "private-key.pem": bad permissions
+ubuntu@192.168.0.1: Permission denied (publickey).
+```
+
+Este warning se arregla sencillamente estableciendo unos permisos adecuados, eliminando permisos para el grupo y para los otros.
+```bash
+$ chmod 600 /ruta/a/la/clave-privada
+```
+Si necesitas comprender mejor el comando`chmod` puedes ver [este tutorial de redhat.com](https://www.redhat.com/sysadmin/linux-file-permissions-explained).
+
+Si estás usando ssh desde Windows hay que hacer lo mismo pero deshabilitando la herencia de permisos antes [ver videotutorial](https://youtu.be/OTwEfZP1nb8?si=-pCxrOvXi1693dtb).
 
 
 ## Copia de ficheros

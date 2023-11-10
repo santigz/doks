@@ -1,0 +1,2 @@
+{{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) -}}
+  <img class="img-simple img-fluid{{ with .Get "class" }} {{.}}{{ end }}" src="{{ $image }}" width="" height="" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>

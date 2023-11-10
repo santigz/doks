@@ -3,6 +3,7 @@ import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import json from 'highlight.js/lib/languages/json';
 import bash from 'highlight.js/lib/languages/bash';
+import shell from 'highlight.js/lib/languages/shell';
 import python from 'highlight.js/lib/languages/python';
 import java from 'highlight.js/lib/languages/java';
 import xml from 'highlight.js/lib/languages/xml';
@@ -13,8 +14,11 @@ import plaintext from 'highlight.js/lib/languages/plaintext';
 import nginx from 'highlight.js/lib/languages/nginx';
 import http from 'highlight.js/lib/languages/http';
 import sql from 'highlight.js/lib/languages/sql';
+import ssh from 'highlight.js/lib/languages/ssh';
+import apache from 'highlight.js/lib/languages/apache';
 
 hljs.registerLanguage('sql', sql);
+hljs.registerLanguage('ssh', ssh);
 hljs.registerLanguage('http', http);
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('nginx', nginx);
@@ -23,11 +27,13 @@ hljs.registerLanguage('plaintext', plaintext);
 hljs.registerLanguage('java', java);
 hljs.registerLanguage('json', json);
 hljs.registerLanguage('bash', bash);
+hljs.registerLanguage('shell', shell);
 hljs.registerLanguage('html', xml);
 hljs.registerLanguage('ini', ini);
 hljs.registerLanguage('toml', ini);
 hljs.registerLanguage('yaml', yaml);
 hljs.registerLanguage('md', markdown);
+hljs.registerLanguage('apache', apache);
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('pre code:not(.language-mermaid)').forEach((block) => {

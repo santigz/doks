@@ -58,5 +58,6 @@ a.card::before {
   <a class="card" href="https://docs.google.com/presentation/d/1oivy43-OaRixS_1HrmsXmEu49vFxb2fl/edit#slide=id.p1">Git branching</a>
   <a class="card" href="/psp/python/intro/">Python</a>
   <a class="card" href="https://docs.google.com/presentation/d/19wiqBHlPwU4kH4mNQv9ywCVSMH6HKuCJz4Ntpx2O7ng/edit?usp=sharing">Procesos (y Python)</a>
+  <a class="card" href="https://docs.google.com/presentation/d/1FWfnNOZ0YbwTBGBR9zavWqL7I0g34Qke1Csh23quvRU/edit?usp=sharing">Python threading</a>
 <!--<a class="card" href="https://blu3r4y.github.io/python-for-java-developers/">Python →</a>-->
 </main>

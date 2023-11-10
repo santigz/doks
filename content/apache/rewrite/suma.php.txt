@@ -1,0 +1,12 @@
+<?php
+// Renombrar este fichero a suma.php
+//
+// Uso: http://host/suma.php?x=4&y=13
+//
+
+if (isset($_GET['x']) && isset($_GET['y'])) {
+  echo "Sumando: " . $_GET['x'] . " + " . $_GET['y'] . " = " . $_GET['x'] + $_GET['y'];
+} else {
+  echo "Debe haber dos operandos x e y";
+}
+echo "\n";

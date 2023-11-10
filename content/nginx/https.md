@@ -88,6 +88,6 @@ $ sudo certbot renew  # Renueva todos los certificados
 
 El paquete `certbot` en Ubuntu instala un temporizador que se lanza dos veces al día para revisar la renovación automática. Debes comprobar que está activado:
 ```bash
-$ sudo systemctl status certbot.timer
+$ sudo systemctl status certbot.service
 # Debe estar *active*
 ```

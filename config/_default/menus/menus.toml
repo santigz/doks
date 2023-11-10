@@ -20,10 +20,20 @@
   name = 'Linux'
   url = '/linux/configuracion-inicial'
 
+[[apache]]
+  identifier = 'apache'
+  name = 'Apache'
+  url = '/apache'
+
 [[nginx]]
   identifier = 'nginx'
   name = 'Nginx'
   url = '/nginx'
+
+[[mysql]]
+  identifier = 'mysql'
+  name = 'MySQL'
+  url = '/mysql'
 
 # [[main]]
 #   name = "Docs"
